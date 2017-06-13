@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: gov.in.pb.pollution.indtracker.SpringBootAppTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.736 sec - in gov.in.pb.pollution.indtracker.SpringBootAppTest
