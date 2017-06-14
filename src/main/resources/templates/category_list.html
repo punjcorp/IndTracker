@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Category Listing Page</title>
+<!--/*/ <th:block th:include="fragments/header :: head"></th:block> /*/-->
+</head>
+<body class="subpage">
+<!--/*/ <th:block th:replace="fragments/header :: header"></th:block> /*/-->
+<!--/*/ <th:block th:replace="fragments/header :: menu"></th:block> /*/-->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<!-- Form -->
+			<h4>Category List</h4>
+
+									<div class="table-wrapper">
+										<div th:if="${not #lists.isEmpty(categories)}">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+									            <tr th:each="category : ${categories}">
+									                <td th:text="${category.name}">Category Name</td>
+									                <td th:text="${category.description}">Description</td>
+									                <td>
+															<ul class="actions small">
+																<li><a th:href="${ '/category/add'}" class="button different small icon fa-plus-circle"></a></li>
+																<li><a th:href="${'/category/edit/' + category.id}" class="button special small icon fa-pencil"></a></li>
+																<li><a th:href="${'/category/delete/' + category.id}" class="button small icon fa-times-circle"></a></li>
+															</ul>
+									                
+													</td>
+									            </tr>
+											</tbody>
+										</table>
+									</div>
+
+		</div>
+		</div>
+		<hr />
+	</section>
+	<!--/*/ <th:block th:include="fragments/footer :: body"></th:block> /*/-->
+</body>
+</html>

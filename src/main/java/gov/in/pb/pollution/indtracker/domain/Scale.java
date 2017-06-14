@@ -78,4 +78,5 @@ public class Scale implements Serializable{
 		this.description = description;
 	}
 
+
 }

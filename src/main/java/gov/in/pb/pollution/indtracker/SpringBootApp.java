@@ -17,8 +17,10 @@ public class SpringBootApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		//SpringApplication app=new SpringApplication(SpringBootApp.class);
 		SpringApplication.run(SpringBootApp.class, args);
-
+		//app.setWebEnvironment(false);
+		//app.run(args);
 	}
 
 }

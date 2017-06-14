@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<title>Punjab Pollution Board Header Page</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../../css/main.css" />
+</head>
+<body class="subpage" >
+	<!-- Header -->
+	<header id="header" th:fragment="header">
+		<nav class="left">
+			<a href="#menu"><span>Menu</span></a>
+		</nav>
+		<a href="../index.html" class="logo">Punjab Pollution Board Industry
+			Tracker</a>
+		<nav class="right">
+			<a href="#" class="button alt">Log in</a>
+		</nav>
+		<hr/>
+	</header>
+
+	<!-- Menu -->
+	<nav id="menu" th:fragment="menu">
+		<ul class="links">
+			<li><a href="industry_list.html">Home</a></li>
+			<li><a href="resource_list.html">Resources</a></li>
+			<li><a href="product_list.html">Industry Products</a></li>
+			<li><a href="category_list.html">Industry Categories</a></li>
+			<li><a href="type_list.html">Industry Types</a></li>
+			<li><a href="scale_list.html">Industry Scales</a></li>
+			<li><a href="status_list.html">Status Types</a></li>
+		</ul>
+		<ul class="actions vertical">
+			<li><a href="#" class="button fit">Login</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
