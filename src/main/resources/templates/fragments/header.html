@@ -23,17 +23,22 @@
 	<!-- Menu -->
 	<nav id="menu" th:fragment="menu">
 		<ul class="links">
-			<li><a href="industry_list.html">Home</a></li>
-			<li><a href="resource_list.html">Resources</a></li>
-			<li><a href="product_list.html">Industry Products</a></li>
-			<li><a href="category_list.html">Industry Categories</a></li>
-			<li><a href="type_list.html">Industry Types</a></li>
-			<li><a href="scale_list.html">Industry Scales</a></li>
-			<li><a href="status_list.html">Status Types</a></li>
+			<li><a href="/industries">Home</a></li>
+			<li><a href="/resources">Resources</a></li>
+			<li><a href="/products">Industry Products</a></li>
+			<li><a href="/categories">Industry Categories</a></li>
+			<li><a href="/types">Industry Types</a></li>
+			<li><a href="/scales">Industry Scales</a></li>
+			<li><a href="/statuses">Status Types</a></li>
 		</ul>
 		<ul class="actions vertical">
 			<li><a href="#" class="button fit">Login</a></li>
 		</ul>
 	</nav>
+	
+	<div id="successmsg" th:fragment="successmsg" >
+		<span th:text="${success}" th:if="${success!=null}"> </span>
+		
+	</div>
 </body>
 </html>
