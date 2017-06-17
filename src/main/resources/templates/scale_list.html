@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Scale Listing Page</title>
+<!--/*/ <th:block th:include="fragments/header :: head"></th:block> /*/-->
+</head>
+<body class="subpage">
+<!--/*/ <th:block th:replace="fragments/header :: header"></th:block> /*/-->
+<!--/*/ <th:block th:replace="fragments/header :: menu"></th:block> /*/-->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<!--/*/ <th:block th:replace="fragments/header :: successmsg"></th:block> /*/-->
+			<!-- Form -->
+			<h4>Scale List</h4>
+			<hr />
+			<div>
+				<a th:href="${ '/scale/add'}"
+					class="button different small icon fa-plus-circle"></a>
+			</div>
+			<hr />
+									<div class="table-wrapper">
+										<div th:if="${not #lists.isEmpty(scales)}">
+										<table>
+											<thead>
+												<tr>
+													<th>Industry Scale</th>
+													<th>Description</th>
+													<th>Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+									            <tr th:each="scale : ${scales}">
+									                <td th:text="${scale.name}">Industry Scale</td>
+									                <td th:text="${scale.description}">Description</td>
+									                <td>
+															<ul class="actions small">
+																<li><a th:href="${ '/scale/add'}" class="button different small icon fa-plus-circle"></a></li>
+																<li><a th:href="${'/scale/edit/' + scale.id}" class="button special small icon fa-pencil"></a></li>
+																<li><a th:href="${'/scale/delete/' + scale.id}" class="button small icon fa-times-circle"></a></li>
+															</ul>
+									                
+													</td>
+									            </tr>
+											</tbody>
+										</table>
+									</div>
+
+		</div>
+		</div>
+		<hr />
+	</section>
+	<!--/*/ <th:block th:include="fragments/footer :: body"></th:block> /*/-->
+</body>
+</html>

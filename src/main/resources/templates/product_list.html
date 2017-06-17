@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Category Listing Page</title>
+<!--/*/ <th:block th:include="fragments/header :: head"></th:block> /*/-->
+</head>
+<body class="subpage">
+<!--/*/ <th:block th:replace="fragments/header :: header"></th:block> /*/-->
+<!--/*/ <th:block th:replace="fragments/header :: menu"></th:block> /*/-->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<!--/*/ <th:block th:replace="fragments/header :: successmsg"></th:block> /*/-->
+			<!-- Form -->
+			<h4>Product List</h4>
+			<hr />
+			<div>
+				<a th:href="${ '/product/add'}"
+					class="button different small icon fa-plus-circle"></a>
+			</div>
+			<hr />
+
+									<div class="table-wrapper">
+										<div th:if="${not #lists.isEmpty(products)}">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+									            <tr th:each="product : ${products}">
+									                <td th:text="${product.name}">Product Name</td>
+									                <td th:text="${product.description}">Description</td>
+									                <td>
+															<ul class="actions small">
+																<li><a th:href="${ '/product/add'}" class="button different small icon fa-plus-circle"></a></li>
+																<li><a th:href="${'/product/edit/' + product.id}" class="button special small icon fa-pencil"></a></li>
+																<li><a th:href="${'/product/delete/' + product.id}" class="button small icon fa-times-circle"></a></li>
+															</ul>
+									                
+													</td>
+									            </tr>
+											</tbody>
+										</table>
+									</div>
+
+		</div>
+		</div>
+		<hr />
+	</section>
+	<!--/*/ <th:block th:include="fragments/footer :: body"></th:block> /*/-->
+</body>
+</html>

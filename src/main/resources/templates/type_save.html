@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Type Add Page</title>
+<!--/*/ <th:block th:include="fragments/header :: head"></th:block> /*/-->
+</head>
+<body class="subpage">
+<!--/*/ <th:block th:replace="fragments/header :: header"></th:block> /*/-->
+<!--/*/ <th:block th:replace="fragments/header :: menu"></th:block> /*/-->	
+
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<!--/*/ <th:block th:replace="fragments/header :: successmsg"></th:block> /*/-->	
+			<!-- Form -->
+			<h4>Add Industry Type</h4>
+
+			<form method="post" th:object="${type}" th:action="@{/type}">
+				<div class="row uniform">
+					<div class="12u$">
+						<input type="hidden" th:field="*{id}"/>
+						<input type="text" name="typename" id="typename" value=""
+							placeholder="Type Name" th:field="*{name}"/>
+					</div>
+
+					<!-- Break -->
+					<div class="12u$">
+						<textarea name="description" id="description"
+							placeholder="Enter description of Type" rows="6" th:field="*{description}"></textarea>
+					</div>
+					<!-- Break -->
+					<div class="12u$">
+						<ul class="actions">
+							<li><input type="submit" value="Save" /></li>
+							<li><input type="reset" value="Clear" class="alt" /></li>
+						</ul>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+		<hr />
+	</section>
+
+
+	<!--/*/ <th:block th:include="fragments/footer :: body"></th:block> /*/-->
+</body>
+</html>

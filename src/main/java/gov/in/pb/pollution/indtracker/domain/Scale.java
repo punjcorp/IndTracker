@@ -21,15 +21,15 @@ public class Scale implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	private String scale;
+	private String name;
 	private String description;
 
 	public Scale() {
 
 	}
 
-	public Scale(String scale, String description) {
-		this.scale = scale;
+	public Scale(String name, String description) {
+		this.name = name;
 		this.description = description;
 	}
 
@@ -49,18 +49,18 @@ public class Scale implements Serializable{
 	}
 
 	/**
-	 * @return the scale
+	 * @return the name
 	 */
-	public String getScale() {
-		return scale;
+	public String getName() {
+		return name;
 	}
 
 	/**
-	 * @param scale
-	 *            the scale to set
+	 * @param name
+	 *            the name to set
 	 */
-	public void setScale(String scale) {
-		this.scale = scale;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**

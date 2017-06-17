@@ -21,15 +21,15 @@ public class Type implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	private String type;
+	private String name;
 	private String description;
 
 	public Type() {
 
 	}
 
-	public Type(String type, String description) {
-		this.type = type;
+	public Type(String name, String description) {
+		this.name = name;
 		this.description = description;
 	}
 
@@ -49,18 +49,18 @@ public class Type implements Serializable{
 	}
 
 	/**
-	 * @return the type
+	 * @return the name
 	 */
-	public String getType() {
-		return type;
+	public String getName() {
+		return name;
 	}
 
 	/**
-	 * @param type
-	 *            the type to set
+	 * @param name
+	 *            the name to set
 	 */
-	public void setType(String type) {
-		this.type = type;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**

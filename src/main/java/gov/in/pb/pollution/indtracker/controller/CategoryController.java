@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  */
 @Controller
-public class IndTrackerController {
+public class CategoryController {
 	
 	private CategoryService categoryService;
 	private CategoryService productService;

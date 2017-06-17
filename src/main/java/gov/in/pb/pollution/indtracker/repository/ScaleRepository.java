@@ -14,5 +14,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface ScaleRepository extends CrudRepository<Scale, Integer> {
 
-	List<Scale> findByScale(String scale);
+	List<Scale> findByName(String name);
 }
