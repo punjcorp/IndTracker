@@ -49,4 +49,10 @@ public class ResourceServiceImpl implements ResourceService {
 		return resourceRepository.save(resource);
 	}
 
+	@Override
+	public boolean deleteResources() {
+		resourceRepository.deleteAll();
+		return Boolean.TRUE;
+	}
+
 }

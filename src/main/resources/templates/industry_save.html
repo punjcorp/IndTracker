@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Industry Add Page</title>
+<!--/*/ <th:block th:include="fragments/header :: head"></th:block> /*/-->
+</head>
+<body class="subpage">
+	<!--/*/ <th:block th:replace="fragments/header :: header"></th:block> /*/-->
+	<!--/*/ <th:block th:replace="fragments/header :: menu"></th:block> /*/-->
+
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<!-- Form -->
+			<h4>Industry Details</h4>
+
+			<form method="post" action="#">
+				<div class="row uniform">
+					<div class="12u$">
+						<input type="text" name="fileno" id="fileno" value=""
+							placeholder="File No." />
+					</div>
+
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="name" id="name" value=""
+							placeholder="Name" />
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="email" name="email" id="email" value=""
+							placeholder="Email" />
+					</div>
+					<div class="12u$">
+						<input type="text" name="address1" id="address1" value=""
+							placeholder="Address Line 1" />
+					</div>
+					<div class="12u$">
+						<input type="text" name="address2" id="address2" value=""
+							placeholder="Address Line 2" />
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="city" id="city" value=""
+							placeholder="City" />
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="text" name="district" id="email" value=""
+							placeholder="District" />
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="country" id="country" value=""
+							placeholder="Country" />
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="text" name="pincode" id="pincode" value=""
+							placeholder="Pincode" />
+					</div>
+
+					<!-- Break -->
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="scale" id="scale">
+								<option value="">- Scale -</option>
+								<option value="S">S - Small</option>
+								<option value="M">M - Medium</option>
+								<option value="L">L - Large</option>
+								<option value="LBA">LB - A</option>
+								<option value="LBB">LB - B</option>
+								<option value="LBC">LB - C</option>
+								<option value="LBCP">LB - CORP</option>
+							</select>
+						</div>
+					</div>
+					<!-- Break -->
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="category" id="category">
+								<option value="">- Category -</option>
+								<option value="R">R</option>
+								<option value="O">O</option>
+								<option value="G">G</option>
+								<option value="W">W</option>
+								<option value="R17">R-17</option>
+							</select>
+						</div>
+					</div>
+
+
+					<!-- Break -->
+					<div class="12u$">
+						<input type="text" name="type" id="type" value=""
+							placeholder="Type" />
+					</div>
+
+					<div class="12u$">
+						<h4>Manufacturing</h4>
+					</div>
+					<div class="12u$">
+						<select multiple="multiple" name="products" id="products" style='height: 100%'>
+							<option value="">- Products Manufactured -</option>
+							<option value="1">ERW Pipes</option>
+							<option value="2">Pet Bottles</option>
+							<option value="3">Eggs</option>
+						</select>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="installunits" id="installunits" value=""
+							placeholder="Units on Installed Date" />
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="text" name="installdate" id="installdate" value=""
+							placeholder="Installed Date" />
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="currentunits" id="currentunits" value=""
+							placeholder="Units on Present Date" />
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="currentdate" id="currentdate" value=""
+							placeholder="Date of Measurement" />
+					</div>
+
+					<div class="12u$">
+						<h4>Water Act, 1974</h4>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="wateract" id="wateract">
+								<option value="">- Consent Status -</option>
+								<option value="G">G</option>
+								<option value="R">R</option>
+								<option value="NA">NA</option>
+								<option value="RNA">RNA</option>
+								<option value="NR">NR</option>
+								<option value="P">P</option>
+							</select>
+						</div>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="date" name="edate1" id="edate1" value=""
+							placeholder="Expiry Date" />
+					</div>
+
+					<div class="12u$">
+						<h4>Air Act, 1981</h4>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="airact" id="airact">
+								<option value="">- Consent Status -</option>
+								<option value="G">G</option>
+								<option value="R">R</option>
+								<option value="NA">NA</option>
+								<option value="RNA">RNA</option>
+								<option value="NR">NR</option>
+								<option value="P">P</option>
+							</select>
+						</div>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="date" name="edate2" id="edate2" value=""
+							placeholder="Expiry Date" />
+					</div>
+
+					<div class="12u$">
+						<h4>Authorization Status under HWM Rules</h4>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="hwmact" id="hwmact">
+								<option value="">- Consent Status -</option>
+								<option value="G">G</option>
+								<option value="R">R</option>
+								<option value="NA">NA</option>
+								<option value="RNA">RNA</option>
+								<option value="NR">NR</option>
+								<option value="P">P</option>
+							</select>
+						</div>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="date" name="edate3" id="edate3" value=""
+							placeholder="Expiry Date" />
+					</div>
+
+					<div class="12u$">
+						<h4>Efluent Discharge (KLD)</h4>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="tradekld" id="tradekld" value=""
+							placeholder="Trade KLD" />
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="domestickld" id="domestickld" value=""
+							placeholder="Domestic KLD" />
+					</div>
+
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="etpstatus" id="etpstatus">
+								<option value="">- ETP/Rec. Status -</option>
+								<option value="P">P</option>
+								<option value="NP">NP</option>
+								<option value="NR">NR</option>
+								<option value="REC">REC</option>
+							</select>
+						</div>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<div class="select-wrapper">
+							<select name="apcdstatus" id="apcdstatus">
+								<option value="">- APCD Status -</option>
+								<option value="P">P</option>
+								<option value="NP">NP</option>
+								<option value="NR">NR</option>
+							</select>
+						</div>
+					</div>
+					<div class="12u$">
+						<h4>Compliance Status</h4>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<h4>Water</h4>
+						<div class="select-wrapper">
+							<select name="watercstatus" id="watercstatus">
+								<option value="">- Status -</option>
+								<option value="C">C</option>
+								<option value="NC">NC</option>
+							</select>
+						</div>
+					</div>
+					<div class="6u 12u$(xsmall)">
+						<h4>Air</h4>
+						<div class="select-wrapper">
+							<select name="aircstatus" id="aircstatus">
+								<option value="">- Status -</option>
+								<option value="C">C</option>
+								<option value="NC">NC</option>
+							</select>
+						</div>
+					</div>
+					<div class="12u$">
+						<h4>Operational Status</h4>
+					</div>
+					<!-- Break -->
+					<div class="4u 12u$(small)">
+						<input type="radio" id="operational" name="opstatus" th:checked="${flag} ? 'checked'"/>
+						<label for="operational">O - Operational</label>
+					</div>
+					<div class="4u 12u$(small)">
+						<input type="radio" id="closed" name="opstatus"/> <label
+							for="closed">C - Closed</label>
+					</div>
+					<div class="4u$ 12u$(small)">
+						<input type="radio" id="notclosed" name="opstatus"/> <label
+							for="notclosed">NC - Not Closed</label>
+					</div>
+					<!-- Break -->
+					<div class="12u$">
+						<textarea name="remarks" id="remarks"
+							placeholder="Enter your comments" rows="6"></textarea>
+					</div>
+					<!-- Break -->
+					<div class="12u$">
+						<ul class="actions">
+							<li><input type="submit" value="Save" /></li>
+							<li><input type="reset" value="Clear" class="alt" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
+		</div>
+		<hr />
+	</section>
+	<!--/*/ <th:block th:include="fragments/footer :: body"></th:block> /*/-->
+
+</body>
+</html>

@@ -48,7 +48,6 @@ public class ResourceController {
 	@RequestMapping("/resource/edit/{id}")
 	public String editResource(@PathVariable Integer id, Model model) {
 		model.addAttribute("resource", resourceService.getResourceById(id));
-
 		System.out.println("Returning resource for id: " + id);
 		return "resource_save";
 	}
@@ -69,6 +68,16 @@ public class ResourceController {
 		model.addAttribute("success", new String("The resource deleted successfully!!"));
 		model.addAttribute("resources", resourceService.getAllResources());
 		System.out.println("Deleted resource for id: " + id);
+		return "resource_list";
+	}
+
+	@RequestMapping("/resource/deleteall")
+	public String deleteAllResources(Model model) {
+		System.out.println("Deleting all the resources ");
+		resourceService.deleteResources();
+		model.addAttribute("success", new String("All the resources deleted successfully!!"));
+		model.addAttribute("resources", resourceService.getAllResources());
+		System.out.println("Deleted all the resources ");
 		return "resource_list";
 	}
 
