@@ -56,7 +56,7 @@
 					<!-- Break -->
 					<div class="6u 12u$(xsmall)">
 						<div class="select-wrapper">
-							<select name="scale" id="scale">
+							<select name="scale" id="scale" th:if="${not #lists.isEmpty(allStatus.scales)}">
 								<option value="">- Scale -</option>
 								<option value="S">S - Small</option>
 								<option value="M">M - Medium</option>

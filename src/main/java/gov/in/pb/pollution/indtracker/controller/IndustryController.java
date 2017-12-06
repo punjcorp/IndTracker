@@ -45,6 +45,7 @@ public class IndustryController {
 	@RequestMapping("/industry/add")
     public String addIndustry(Model model) {
 		model.addAttribute("industry", new Industry());
+		model.addAttribute("allStatus",industryService.getAllStatus());
         System.out.println("Add a new industry");
         return "industry_save";
     }	
